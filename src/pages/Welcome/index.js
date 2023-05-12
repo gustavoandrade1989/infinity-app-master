@@ -29,7 +29,7 @@ export default function Welcome() {
 
             <animatable.View delay={600} animation="fadeInUp" style={styles.containerFormRegister}>
                 <TouchableOpacity style={styles.buttonRegister} onPress={ () => navigation.navigate('Register') }>
-                    <Text style={styles.buttonTextRegister}>Registrar</Text>
+                    <Text style={styles.buttonTextRegister}>Cadastrar-se</Text>
                 </TouchableOpacity>
             </animatable.View>
             
@@ -41,19 +41,19 @@ export default function Welcome() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#E3F2FD',
+        backgroundColor: '#FFF',
 
     },
     containerLogo: {
         flex: 5,
-        backgroundColor: '#E3F2FD',
+        backgroundColor: '#FFF',
         justifyContent: 'center',
         alignItems: 'center'
 
     },
     containerFormLogin: {
         flex: 1,
-        backgroundColor: '#87CEFA',
+        backgroundColor: '#FFF',
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         paddingStart: '5%',
@@ -61,15 +61,15 @@ const styles = StyleSheet.create({
     },
     containerFormRegister: {
         flex: 1,
-        backgroundColor: '#87CEFA',
+        backgroundColor: '#FFF',
         paddingStart: '5%',
         paddingEnd: '5%'
     },
     buttonLogin: {
         position: 'absolute',
         backgroundColor: '#0D5692',
-        borderRadius: 50,
-        paddingVertical: 8,
+        borderRadius: 15,
+        paddingVertical: 10,
         marginHorizontal: 100,
         marginVertical: 5,
         width: '50%',

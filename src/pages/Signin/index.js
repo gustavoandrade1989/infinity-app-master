@@ -9,9 +9,15 @@ export default function SignIn() {
 
     return (
         <View style={styles.container}>
-            <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader} > 
-                <Text style={styles.message}>Login</Text>     
-            </Animatable.View>
+            
+            <View style={styles.containerLogo}>
+                <Animatable.Image
+                    animation="flipInY"
+                    source={require('../../assets/logo.png')}
+                    style={{ width: '50%' }}
+                    resizeMode="contain"
+                />
+            </View>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
                 <Text style={styles.title} >Email</Text>
@@ -35,12 +41,18 @@ export default function SignIn() {
 const styles = StyleSheet.create({
         container:{
             flex: 5,
-        backgroundColor: '#E3F2FD',
+        backgroundColor: '#FFF',
         },
         containerHeader:{
             marginTop: '14%',
             marginBottom: '8%',
             paddingStart: '5%',
+        },
+        containerLogo: {
+            flex: 1,
+            backgroundColor: '#FFF',
+            justifyContent: 'center',
+            alignItems: 'center'
         },
         message:{
             fontSize: 28,
@@ -54,14 +66,15 @@ const styles = StyleSheet.create({
             marginTop: 28,
         },
         containerForm:{
-            backgroundColor: '#87CEFA',
-            flex: 1,
+            backgroundColor: '#FFF',
+            flex: 2,
             borderTopLeftRadius: 25,
             borderTopRightRadius: 25,
             paddingStart: '5%',
             paddingEnd: '5%'
         },
         input:{
+            borderBottomColor: '#0D5692' ,
             borderBottomWidth: 1,
             height: 40,
             marginBottom: 12,
@@ -72,7 +85,7 @@ const styles = StyleSheet.create({
             borderRadius: 50,
             paddingVertical: 8,
             marginHorizontal: 100,
-            marginVertical: 125,
+            marginVertical: 100,
             width: '50%',
             bottom: '15%',
             alignItems: 'center',
@@ -87,7 +100,7 @@ const styles = StyleSheet.create({
             borderRadius: 50,
             paddingVertical: 8,
             marginHorizontal: 10,
-            marginVertical: 100,
+            
             width: '100%',
             bottom: '15%',
             alignItems: 'center',
