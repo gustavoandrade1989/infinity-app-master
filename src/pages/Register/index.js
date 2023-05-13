@@ -38,8 +38,8 @@ export default function Register() {
                     <Text style={styles.buttonTextAcess}>Cadastrar</Text>   
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonReturn} onPress={ () => navigation.navigate('Welcome') }>
-                    <Text style={styles.buttonTextReturn}>Voltar</Text>   
+                <TouchableOpacity style={styles.buttonReturn} onPress={ () => navigation.navigate('SignIn') }>
+                    <Text style={styles.buttonTextReturn}>Já possui uma conta?</Text>   
                 </TouchableOpacity>
             </Animatable.View> 
                 

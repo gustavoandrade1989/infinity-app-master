@@ -1,6 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
+import { FontAwesome } from '@expo/vector-icons'; 
+import { Fontisto } from '@expo/vector-icons';
+
+import { Ionicons } from '@expo/vector-icons';
+
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
 
@@ -20,18 +25,30 @@ export default function SignIn() {
             </View>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title} >Email</Text>
-                <TextInput placeholder="Digite um Email" style={styles.input} />
+                <FontAwesome name="user" size={24} color="black" style={styles.iconUser} />
+                
+                <TextInput placeholder="E-mail" style={styles.input} />
+                
+                <TouchableOpacity >
+                    <Ionicons name="eye-outline" size={24} color="black" style={styles.iconSecret}/>       
+                </TouchableOpacity>
+                
+                <Fontisto name="locked" size={24} color="black" style={styles.iconLocked}/>
 
-                <Text style={styles.title} >Senha</Text>
-                <TextInput placeholder="Digite sua Senha" style={styles.input} />
+                <TextInput placeholder="Senha" style={styles.input} />
+                
+                
 
                 <TouchableOpacity style={styles.buttonAcess} onPress={ () => navigation.navigate('Profile')} >
-                    <Text style={styles.buttonTextAcess}>Acessar</Text>   
+                    <Text style={styles.buttonTextAcess}>Logar</Text>   
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.buttonPassword} onPress={ () => navigation.navigate('Welcome') }>
+                    <Text style={styles.buttonTextPassword}>Esqueceu a senha?</Text>   
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.buttonRegister} onPress={ () => navigation.navigate('Register') }>
-                    <Text style={styles.buttonTextRegister}>Não Possui uma conta? Cadastre-se</Text>   
+                    <Text style={styles.buttonTextRegister}>Cadastrar-se</Text>   
                 </TouchableOpacity>
 
             </Animatable.View>   
@@ -53,23 +70,10 @@ const styles = StyleSheet.create({
             backgroundColor: '#FFF',
             justifyContent: 'center',
             alignItems: 'center'
-        },
-        message:{
-            fontSize: 28,
-            fontWeight: 'bold',
-            color: '#0D5692',
-            justifyContent: 'center',
-            alignItems: 'center'
-        },
-        title:{
-            fontSize: 25,
-            marginTop: 28,
-        },
+        },   
         containerForm:{
             backgroundColor: '#FFF',
             flex: 2,
-            borderTopLeftRadius: 25,
-            borderTopRightRadius: 25,
             paddingStart: '5%',
             paddingEnd: '5%'
         },
@@ -77,15 +81,17 @@ const styles = StyleSheet.create({
             borderBottomColor: '#0D5692' ,
             borderBottomWidth: 1,
             height: 40,
-            marginBottom: 12,
-            fontSize: 16,
+            marginBottom: 20,
+            fontSize: 20,
+            paddingLeft: 30,
+            marginHorizontal: 35,
         },
         buttonAcess: {
             backgroundColor: '#0D5692',
-            borderRadius: 50,
+            borderRadius: 10,
             paddingVertical: 8,
             marginHorizontal: 100,
-            marginVertical: 100,
+            top: 100,
             width: '50%',
             bottom: '15%',
             alignItems: 'center',
@@ -97,20 +103,47 @@ const styles = StyleSheet.create({
             fontWeight: 'bold'
         },
         buttonRegister: {    
-            borderRadius: 50,
-            paddingVertical: 8,
-            marginHorizontal: 10,
-            
-            width: '100%',
+            marginHorizontal: 100,
+            top: 225,
+            width: '50%',
             bottom: '15%',
             alignItems: 'center',
             justifyContent: 'center'
         }, 
         buttonTextRegister: {
+            fontSize: 25,
+            color: '#023E8A',
+             
+        },
+        buttonPassword: {    
+            top: 110,
+            marginHorizontal: 100,
+            width: '50%',
+            bottom: '15%',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        buttonTextPassword: {
             fontSize: 18,
             color: '#023E8A',
             fontWeight: 'bold' 
         }, 
+        iconUser: {
+            position: 'absolute',
+            left: 55,
+            top: 5,
+        },
+        iconLocked: {
+            position: 'absolute',
+            left: 55,
+            top: 65,
+        },
+        iconSecret: {
+            position: 'absolute',
+            right: 5,
+            top: 10,
+        },
+
 })
 
 
