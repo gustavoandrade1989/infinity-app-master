@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-nativ
 
 import { FontAwesome } from '@expo/vector-icons'; 
 import { Fontisto } from '@expo/vector-icons';
-
 import { Ionicons } from '@expo/vector-icons';
 
 import * as Animatable from 'react-native-animatable'
@@ -37,8 +36,6 @@ export default function SignIn() {
 
                 <TextInput placeholder="Senha" style={styles.input} />
                 
-                
-
                 <TouchableOpacity style={styles.buttonAcess} onPress={ () => navigation.navigate('Profile')} >
                     <Text style={styles.buttonTextAcess}>Logar</Text>   
                 </TouchableOpacity>

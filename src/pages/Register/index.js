@@ -19,19 +19,16 @@ export default function Register() {
                 />
             </View>    
            
-
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
+
                 <Text style={styles.message} >Cadastro</Text>
 
                 <TextInput placeholder="Nome Completo" style={styles.input} />
                 
-                
                 <TextInput placeholder="E-Mail" style={styles.input} />
 
-                
                 <TextInput placeholder="Senha" style={styles.input} />
 
-                
                 <TextInput placeholder="Confirmar Senha" style={styles.input} />
 
                 <TouchableOpacity style={styles.buttonAcess}>
@@ -41,9 +38,9 @@ export default function Register() {
                 <TouchableOpacity style={styles.buttonReturn} onPress={ () => navigation.navigate('SignIn') }>
                     <Text style={styles.buttonTextReturn}>Já possui uma conta?</Text>   
                 </TouchableOpacity>
+
             </Animatable.View> 
                 
-          
         </View>
     );
 }

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-import * as animatable from 'react-native-animatable'
-import { useNavigation } from '@react-navigation/native'
+import * as animatable from 'react-native-animatable';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Welcome() {
     const navigation = useNavigation();
@@ -18,8 +18,6 @@ export default function Welcome() {
                     resizeMode="contain"
                 />
             </View>
-
-
 
             <animatable.View delay={600} animation="fadeInUp" style={styles.containerFormLogin}>
                 <TouchableOpacity style={styles.buttonLogin} onPress={ () => navigation.navigate('SignIn') }>
@@ -42,14 +40,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#FFF',
-
     },
     containerLogo: {
         flex: 5,
         backgroundColor: '#FFF',
         justifyContent: 'center',
-        alignItems: 'center'
-
+        alignItems: 'center',
     },
     containerFormLogin: {
         flex: 1,
@@ -57,13 +53,13 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         paddingStart: '5%',
-        paddingEnd: '5%'
+        paddingEnd: '5%',
     },
     containerFormRegister: {
         flex: 1,
         backgroundColor: '#FFF',
         paddingStart: '5%',
-        paddingEnd: '5%'
+        paddingEnd: '5%',
     },
     buttonLogin: {
         position: 'absolute',
@@ -75,7 +71,7 @@ const styles = StyleSheet.create({
         width: '50%',
         bottom: '15%',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     buttonRegister: {
         position: 'absolute',
@@ -87,18 +83,17 @@ const styles = StyleSheet.create({
         width: '50%',
         bottom: '15%',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     buttonTextLogin: {
         fontSize: 18,
         color: '#FFF',
-        fontWeight: 'bold'
-
+        fontWeight: 'bold',
     },
     buttonTextRegister: {
         fontSize: 18,
         color: '#0D5692',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     }
-})
+});
 
