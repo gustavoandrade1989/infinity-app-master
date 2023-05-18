@@ -1,10 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-import { AntDesign } from '@expo/vector-icons';
-import { Octicons } from '@expo/vector-icons'; 
-
+import Icon from "react-native-ico-material-design";
 import { useNavigation } from '@react-navigation/native'
+
+var iconHeight = 26;
+var iconWisth = 26;
 
 
 export default function Profile() {
@@ -17,34 +18,20 @@ export default function Profile() {
             </View>
 
             <View style={styles.containerMain}>
-
-        {/* FazerFlatList */}
-
-                
-                
-            </View>
-
-            <View style={styles.containerBar}>
-                
-                
-                <TouchableOpacity>
-                    <AntDesign name="home" size={30} color="#0D5692" style={styles.IconHome} />
-                    <Text style={styles.textIconHome}>Principal</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity>
-                    <Octicons name="gear" 
-                    size={30} color="black" 
-                    style={styles.IconGear} 
-                    onPress={ () => navigation.navigate('Settgns') }/> 
-                    <Text style={styles.textIconGear}>Configurações</Text>
-                </TouchableOpacity>
-
+        {/* FazerFlatList */} 
             </View>
 
 
+        <View style={styles.containerNav}>
+            <View style={styles.navBar}>
+                <TouchableOpacity onPres={() => this.chanceText('Favourites')} style={styles.iconBeHave} >
+                 <Icon name="favourite-heart-button" />
+                </TouchableOpacity>
+            </View>
+        </View>
 
         </View>
+
     )
 }
 const styles = StyleSheet.create({
@@ -54,80 +41,24 @@ const styles = StyleSheet.create({
     },
     containerUser: {
         flex: 3,
-        backgroundColor: '#87CEFA'
+        backgroundColor: '#87CEFA',
     },
     containerMain: {
         flex: 6,
-        backgroundColor: '#F5F5F5'
+        backgroundColor: '#F5F5F5',
     },
-    containerBar: {
-        flex: 1,
+    containerNav: {
+        position: 'absolute',
+        alignContent: 'center',
+        bottom: 0
+    },
+    navBar: {
+        flexDirection: 'row',
         backgroundColor: '#FFF',
+        width: '100%',
+        justifyContent: 'space-evenly', 
     },
-    buttonGames: {
-        position: 'absolute',
-        paddingStart: '5%',
-        paddingEnd: '5%',
-        left: 50,
-        backgroundColor: '#0D5692',
-        borderRadius: 15,
-        paddingVertical: 10,
-        width: '70%',
-        bottom: '70%',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    buttonHistorys: {
-        position: 'absolute',
-        backgroundColor: '#0D5692',
-        borderRadius: 15,
-        paddingVertical: 10,
-        width: '50%',
-        bottom: '15%',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    buttonExercise: {
-        backgroundColor: '#0D5692',
-        borderRadius: 15,
-        paddingVertical: 10,
-        width: '50%',
-        bottom: '15%',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    buttonTitle: {
-        fontSize: 20,
-        color: '#FFF',
-        fontWeight: 'bold'
-    },
-    buttonText: {
-        fontSize: 15,
-        color: '#FFF',
-         
-    }, 
-    IconHome: {
-        position: 'absolute',
-        left: 50,
-        top: 10,
-    },
-    IconGear: {
-        position: 'absolute',
-        right: 80,
-        top: 10,
-    },
-    textIconHome: {
-        position: 'absolute',
-        color: '#0D5692',
-        fontSize: 15,
-        left: 35,
-        top: 40,
-    },
-    textIconGear: {
-        position: 'absolute',
-        fontSize: 15,
-        right: 45,
-        top: 40,
-    },
-
+    iconBeHave: {
+        padding: 14,
+    }
 })

@@ -20,9 +20,9 @@ export default function Register() {
             </View>    
            
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-
-                <Text style={styles.message} >Cadastro</Text>
-
+                <View style={styles.ContainerMessage}>
+                    <Text style={styles.message} >Cadastro</Text>
+                </View>
                 <TextInput placeholder="Nome Completo" style={styles.input} />
                 
                 <TextInput placeholder="E-Mail" style={styles.input} />
@@ -60,14 +60,18 @@ const styles = StyleSheet.create({
             marginBottom: '8%',
             paddingStart: '5%',
         },
-        message:{
-            fontSize: 28,
+        ContainerMessage:{
+            width: '100%',
             marginVertical: 20,
-            marginHorizontal: 100,
             fontWeight: 'bold',
             color: '#0D5692',
             justifyContent: 'center',
             alignItems: 'center'
+        },
+        message:{
+            fontSize: 28,
+            fontWeight: 'bold',
+            color: '#0D5692',
         },
         
         containerForm:{
@@ -76,7 +80,7 @@ const styles = StyleSheet.create({
             borderTopLeftRadius: 25,
             borderTopRightRadius: 25,
             paddingStart: '5%',
-            paddingEnd: '5%',
+            paddingEnd: '5%'
             
         },
         containerFormAcess: {
@@ -95,8 +99,9 @@ const styles = StyleSheet.create({
             borderBottomColor: '#0D5692' ,
             borderBottomWidth: 1,
             height: 50,
-            marginBottom: 15,
-            fontSize: 20, 
+            marginBottom: 2,
+            fontSize: 20,
+            paddingHorizontal: 10,
         },
         buttonAcess: {
             backgroundColor: '#0D5692',
@@ -114,11 +119,10 @@ const styles = StyleSheet.create({
             color: '#FFF',
             fontWeight: 'bold'
         },
-        buttonReturn: {    
-            borderRadius: 15,
+        buttonReturn: { 
             paddingVertical: 10,
-            marginHorizontal: 10,
             marginVertical: 1,
+            marginHorizontal: 10,
             width: '100%',
             bottom: '15%',
             alignItems: 'center',

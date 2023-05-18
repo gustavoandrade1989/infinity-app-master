@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-nativ
 
 import { FontAwesome } from '@expo/vector-icons'; 
 import { Fontisto } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
 
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
@@ -28,9 +27,6 @@ export default function SignIn() {
                 
                 <TextInput placeholder="E-mail" style={styles.input} />
                 
-                <TouchableOpacity >
-                    <Ionicons name="eye-outline" size={24} color="black" style={styles.iconSecret}/>       
-                </TouchableOpacity>
                 
                 <Fontisto name="locked" size={24} color="black" style={styles.iconLocked}/>
 

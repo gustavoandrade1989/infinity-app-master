@@ -62,28 +62,27 @@ const styles = StyleSheet.create({
         paddingEnd: '5%',
     },
     buttonLogin: {
-        position: 'absolute',
         backgroundColor: '#0D5692',
         borderRadius: 15,
         paddingVertical: 10,
         marginHorizontal: 100,
-        marginVertical: 5,
         width: '50%',
         bottom: '15%',
         alignItems: 'center',
         justifyContent: 'center',
     },
     buttonRegister: {
-        position: 'absolute',
+   
         backgroundColor: '#FFF',
         borderRadius: 50,
         paddingVertical: 8,
         marginHorizontal: 100,
-        marginVertical: 40,
+        marginVertical: 1,
         width: '50%',
         bottom: '15%',
         alignItems: 'center',
         justifyContent: 'center',
+        
     },
     buttonTextLogin: {
         fontSize: 18,
