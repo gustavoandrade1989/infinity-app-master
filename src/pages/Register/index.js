@@ -4,8 +4,7 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from 'reac
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
 
-export default function Register() {
-    const navigation = useNavigation();
+export default function Register( {navigation} ) {
 
     return (
         <View style={styles.container}>

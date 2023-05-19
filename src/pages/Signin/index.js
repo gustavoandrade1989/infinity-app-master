@@ -7,9 +7,7 @@ import { Fontisto } from '@expo/vector-icons';
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
 
-export default function SignIn() {
-    const navigation = useNavigation();
-
+export default function SignIn( {navigation} ) {
     return (
         <View style={styles.container}>
             
@@ -83,7 +81,7 @@ const styles = StyleSheet.create({
             backgroundColor: '#0D5692',
             borderRadius: 10,
             paddingVertical: 8,
-            marginHorizontal: 100,
+            marginHorizontal: 85,
             top: 100,
             width: '50%',
             bottom: '15%',
@@ -96,9 +94,8 @@ const styles = StyleSheet.create({
             fontWeight: 'bold'
         },
         buttonRegister: {    
-            marginHorizontal: 100,
             top: 225,
-            width: '50%',
+            width: '100%',
             bottom: '15%',
             alignItems: 'center',
             justifyContent: 'center'
@@ -110,8 +107,7 @@ const styles = StyleSheet.create({
         },
         buttonPassword: {    
             top: 110,
-            marginHorizontal: 100,
-            width: '50%',
+            width: '100%',
             bottom: '15%',
             alignItems: 'center',
             justifyContent: 'center'

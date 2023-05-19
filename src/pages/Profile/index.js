@@ -1,15 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-import Icon from "react-native-ico-material-design";
 import { useNavigation } from '@react-navigation/native'
 
-var iconHeight = 26;
-var iconWisth = 26;
-
-
-export default function Profile() {
-    const navigation = useNavigation();
+export default function Profile( {navigation} ) {
 
     return (
         <View style={styles.container}>
@@ -20,15 +14,6 @@ export default function Profile() {
             <View style={styles.containerMain}>
         {/* FazerFlatList */} 
             </View>
-
-
-        <View style={styles.containerNav}>
-            <View style={styles.navBar}>
-                <TouchableOpacity onPres={() => this.chanceText('Favourites')} style={styles.iconBeHave} >
-                 <Icon name="favourite-heart-button" />
-                </TouchableOpacity>
-            </View>
-        </View>
 
         </View>
 
