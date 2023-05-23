@@ -1,9 +1,9 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Welcome from '../pages/Welcome';
-import SignIn from '../pages/Signin';
-import Register from '../pages/Register';
-import Profile from '../pages/Profile';
-import Settngs from '../pages/profileSettings';
+import Welcome from '../Screens/Login and Register/firstScreen';
+import SignIn from '../Screens/Login and Register/Login';
+import Register from '../Screens/Login and Register/Register';
+import Profile from '../Screens/Profile/Profile';
+import Settings from '../Screens/Profile/profileSettings';
 
 const Stack = createNativeStackNavigator();
 
@@ -44,8 +44,8 @@ export default function Routes() {
             />
 
             <Stack.Screen
-            name="Settgns"
-            component={Settngs}
+            name="profileSettigns"
+            component={Settings}
             options={{ headerShown: false }}
             />
 

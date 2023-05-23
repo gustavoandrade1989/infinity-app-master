@@ -1,10 +1,9 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
-import { MyTabs } from './src/routes/MyTabs';
 
 import { NavigationContainer } from '@react-navigation/native';
-import Routes from './src/routes/';
-// import TabNav from './src/routes/indexBar';
+import Routes from './src/routes/Routes';
+
 
 export default function App() {
   return (

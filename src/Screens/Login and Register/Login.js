@@ -30,15 +30,15 @@ export default function SignIn( {navigation} ) {
 
                 <TextInput placeholder="Senha" style={styles.input} />
                 
-                <TouchableOpacity style={styles.buttonAcess} onPress={ () => navigation.navigate('Profile')} >
+                <TouchableOpacity activeOpacity={0.8} style={styles.buttonAcess} onPress={ () => navigation.navigate('Profile')} >
                     <Text style={styles.buttonTextAcess}>Logar</Text>   
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonPassword} onPress={ () => navigation.navigate('Welcome') }>
+                <TouchableOpacity activeOpacity={0.8} style={styles.buttonPassword} onPress={ () => navigation.navigate('Welcome') }>
                     <Text style={styles.buttonTextPassword}>Esqueceu a senha?</Text>   
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonRegister} onPress={ () => navigation.navigate('Register') }>
+                <TouchableOpacity activeOpacity={0.8} style={styles.buttonRegister} onPress={ () => navigation.navigate('Register') }>
                     <Text style={styles.buttonTextRegister}>Cadastrar-se</Text>   
                 </TouchableOpacity>
 

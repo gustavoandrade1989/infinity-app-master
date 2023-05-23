@@ -1,8 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-
 import { useNavigation } from '@react-navigation/native'
-
+import Buttom from "./ScrollviewButtom";
 export default function Profile( {navigation} ) {
 
     return (
@@ -12,7 +11,8 @@ export default function Profile( {navigation} ) {
             </View>
 
             <View style={styles.containerMain}>
-        {/* FazerFlatList */} 
+                {/* Fazer ScrollView */}
+                <Buttom/>
             </View>
 
         </View>
