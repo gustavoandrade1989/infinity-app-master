@@ -12,19 +12,19 @@ const Button = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
-        <TouchableOpacity style={styles.containerButtonGames}>
+        <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonGames}>
             <Text style={styles.buttonTextGames}>
                 Botao 1
             </Text>
             <Text>Descrição 1</Text>     
         </TouchableOpacity>
-        <TouchableOpacity style={styles.containerButtonHistory}>
+        <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonHistory}>
             <Text style={styles.buttonTextHistory}>
                 Botao 2
             </Text>
             <Text>Descrição 2</Text>     
         </TouchableOpacity>
-        <TouchableOpacity style={styles.containerButtonActivity}>
+        <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonActivity}>
             <Text style={styles.buttonTextActivity}>
                 Botao 3
             </Text>

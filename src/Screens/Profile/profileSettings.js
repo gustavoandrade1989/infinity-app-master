@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 
-export default function Settings(){
+export default function Settings() {
     return (
     <View>
         <Text>
@@ -10,4 +10,4 @@ export default function Settings(){
         </Text>
     </View>
     )
-}
+};

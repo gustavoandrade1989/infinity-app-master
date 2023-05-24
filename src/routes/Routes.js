@@ -5,6 +5,7 @@ import Register from '../Screens/Login and Register/Register';
 import Profile from '../Screens/Profile/Profile';
 import Settings from '../Screens/Profile/profileSettings';
 
+
 const Stack = createNativeStackNavigator();
 
 export default function Routes() {

@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 
-export default function History(){
+export default function History() {
     return (
     <View>
         <Text>
@@ -10,4 +10,4 @@ export default function History(){
         </Text>
     </View>
     )
-}
+};
