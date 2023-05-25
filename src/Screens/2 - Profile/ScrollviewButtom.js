@@ -12,24 +12,22 @@ const Button = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
+        
         <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonGames}>
-            <Text style={styles.buttonTextGames}>
-                Botao 1
-            </Text>
-            <Text>Descrição 1</Text>     
+            <Text style={styles.title}>Jogos</Text>
+            <Text style={styles.Descrition}>Jogos para colocar o conhecimento em prática.</Text>     
         </TouchableOpacity>
+
         <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonHistory}>
-            <Text style={styles.buttonTextHistory}>
-                Botao 2
-            </Text>
-            <Text>Descrição 2</Text>     
+            <Text style={styles.title}>Histórias</Text>
+            <Text style={styles.Descrition}>Quadrinhos, Textos e muito mais para o entreterimento.</Text>     
         </TouchableOpacity>
+
         <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonActivity}>
-            <Text style={styles.buttonTextActivity}>
-                Botao 3
-            </Text>
-            <Text>Descrição 3</Text>   
+            <Text style={styles.title}>Ativ. Pedagógicas</Text>
+            <Text style={styles.Descrition}>Encontre Atividades para a sua diversão e conhecimento</Text>   
         </TouchableOpacity>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -38,42 +36,43 @@ const Button = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: StatusBar.currentHeight,
+        paddingTop: 50,
     },
     scrollView: {
         marginHorizontal: 20,
 
     },
-    buttonTextGames: {
-        fontSize: 30,
-        color: '#fff',
-        marginBottom: 50,
-    },
     containerButtonGames: {
+        paddingVertical: 10,
+        paddingStart:'10%',
+        paddingEnd: '30%',
         backgroundColor: '#0D5692',
         marginBottom: 50,
         borderRadius: 10, 
     },
-
-    buttonTextHistory: {
-        fontSize: 30,
-        color: '#fff',
-        marginBottom: 50,
-    },
     containerButtonHistory: {
+        paddingVertical: 10,
+        paddingStart:'10%',
+        paddingEnd: '30%',
         backgroundColor: '#3282B8',
         marginBottom: 50,
         borderRadius: 10,
     },
-    buttonTextActivity: {
-        fontSize: 30,
-        color: '#fff',
-        marginBottom: 50,
-    },
     containerButtonActivity: {
+        paddingVertical: 10,
+        paddingStart:'10%',
+        paddingEnd: '30%',
         backgroundColor: '#69B1C9',
         marginBottom: 50,
         borderRadius: 10,
+    },
+    title: {
+        color: '#FFF',
+        fontWeight: 'bold',
+        fontSize: 25,
+    },
+    Descrition: {
+        color: '#FFF'
     },
 
   });

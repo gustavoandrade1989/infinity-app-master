@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
             width: '50%',
             bottom: '15%',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
         },
         buttonTextAcess: {
             fontSize: 18,
