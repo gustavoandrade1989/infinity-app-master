@@ -7,6 +7,7 @@ import SignIn from '../Screens/1 - Login and Register/Login';
 import Register from '../Screens/1 - Login and Register/Register';
 import Profile from '../Screens/2 - Profile/Profile';
 import Settings from '../Screens/2 - Profile/profileSettings';
+import Button from '../Screens/2 - Profile/ScrollviewButtom';
 
 
 const Stack = createNativeStackNavigator();
@@ -69,6 +70,7 @@ export default function Routes() {
             component={Activity}
             options={{ headerShown: false }}
             />
+
 
         </Stack.Navigator>
     )

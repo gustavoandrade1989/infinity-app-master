@@ -8,27 +8,10 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-const Button = () => {
+const Button = ( { navigation } ) => {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.scrollView}>
-        
-        <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonGames}>
-            <Text style={styles.title}>Jogos</Text>
-            <Text style={styles.Descrition}>Jogos para colocar o conhecimento em prática.</Text>     
-        </TouchableOpacity>
-
-        <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonHistory}>
-            <Text style={styles.title}>Histórias</Text>
-            <Text style={styles.Descrition}>Quadrinhos, Textos e muito mais para o entreterimento.</Text>     
-        </TouchableOpacity>
-
-        <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonActivity}>
-            <Text style={styles.title}>Ativ. Pedagógicas</Text>
-            <Text style={styles.Descrition}>Encontre Atividades para a sua diversão e conhecimento</Text>   
-        </TouchableOpacity>
-
-      </ScrollView>
+      
     </SafeAreaView>
   );
 };

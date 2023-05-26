@@ -1,7 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native'
-import Buttom from "./ScrollviewButtom";
+import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 
@@ -28,7 +26,24 @@ export default function Profile({ navigation }) {
 
 
             <View style={styles.containerMain}>
-                <Buttom />
+            <ScrollView style={styles.scrollView}>
+        
+        <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonGames} onPress={() => navigation.navigate('Games')}>
+            <Text style={styles.title}>Jogos</Text>
+            <Text style={styles.Descrition}>Jogos para colocar o conhecimento em prática.</Text>     
+        </TouchableOpacity>
+
+        <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonHistory}>
+            <Text style={styles.title}>Histórias</Text>
+            <Text style={styles.Descrition}>Quadrinhos, Textos e muito mais para o entreterimento.</Text>     
+        </TouchableOpacity>
+
+        <TouchableOpacity activeOpacity={0.8} style={styles.containerButtonActivity}>
+            <Text style={styles.title}>Ativ. Pedagógicas</Text>
+            <Text style={styles.Descrition}>Encontre Atividades para a sua diversão e conhecimento</Text>   
+        </TouchableOpacity>
+
+      </ScrollView>
             </View>
 
         </View>
@@ -69,5 +84,42 @@ const styles = StyleSheet.create({
     nameUser: {
         color: '#FFF',
         fontWeight: 'bold',
-    }
+    },
+    scrollView: {
+        paddingTop: 50,
+        marginHorizontal: 20,
+
+    },
+    containerButtonGames: {
+        paddingVertical: 10,
+        paddingStart:'10%',
+        paddingEnd: '30%',
+        backgroundColor: '#0D5692',
+        marginBottom: 50,
+        borderRadius: 10, 
+    },
+    containerButtonHistory: {
+        paddingVertical: 10,
+        paddingStart:'10%',
+        paddingEnd: '30%',
+        backgroundColor: '#3282B8',
+        marginBottom: 50,
+        borderRadius: 10,
+    },
+    containerButtonActivity: {
+        paddingVertical: 10,
+        paddingStart:'10%',
+        paddingEnd: '30%',
+        backgroundColor: '#69B1C9',
+        marginBottom: 50,
+        borderRadius: 10,
+    },
+    title: {
+        color: '#FFF',
+        fontWeight: 'bold',
+        fontSize: 25,
+    },
+    Descrition: {
+        color: '#FFF'
+    },
 })
